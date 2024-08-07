@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Capstone Project 4: Use a Public API</title>
+    <link rel="stylesheet" href="./styles/main.css" />  
+  </head>
+
+
+  <body>
+    <div class="container">
+      <h1>Joke's On You!</h1>
+      <% if(locals.content && !locals.joke) { %>
+      <div class="response-area">
+        <p><%= content %></p>
+      </div>
+      <% } else if(locals.joke && !joke.setup) { %>
+      <div class="response-area">
+        <p><%= joke.joke %></p>
+      </div>
+      <% } else { %>
+      <div class="response-area">
+        <p><%= joke.setup %></p>
+        <p><%= joke.delivery %></p>
+      </div>
+      <% } %>
+
+    <div class="form-container">
+      <form id="myForm" method="post">
+        <div class="name-text">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required/>
+        </div>
+
+        <div class="category-select">
+          <label for="category">Select a category:</label>
+          <select id="category" name="category" class="form-select">
+            <option value="Any" data-display="Select">Any</option>
+            <option value="Programming">Programming</option>
+            <option value="Misc">Misc</option>
+            <option value="Dark">Dark</option>
+            <option value="Pun">Pun</option>
+            <option value="Spooky">Spooky</option>
+            <option value="Christmas">Christmas</option>
+          </select>
+        </div>
+
+        <div class="black-flags">
+          <p>Select topics to exclude:</p>
+          <input type="checkbox" id="any" name="flags" value="" checked>
+          <label for=""> Any</label>
+          <input type="checkbox" id="nsfw" name="flags" value="nsfw">
+          <label for="nsfw"> NSFW</label>
+          <input type="checkbox" id="religious" name="flags" value="religious">
+          <label for="religious"> Religious</label>
+          <input type="checkbox" id="political" name="flags" value="political">
+          <label for="political"> Political</label>
+          <input type="checkbox" id="racist" name="flags" value="racist">
+          <label for="racist"> Racist</label>
+          <input type="checkbox" id="sexist" name="flags" value="sexist">
+          <label for="sexist"> Sexist</label>
+          <input type="checkbox" id="explicit" name="flags" value="explicit">
+          <label for="explicit"> Explicit</label>
+        </div>
+
+        <div class="button-container">
+          <input id="get" type="submit" value="Submit" formaction="/get-joke" />
+        </div>
+        
+        
+        
+      </form>
+    </div>      
+    </div>
+    <footer>
+      <p>Copyright ©Alex Nepomuceno <%= new Date().getFullYear() %></p>
+      <p>Created using <a href="https://sv443.net/jokeapi/v2/">JokeAPI</a></p>
+    </footer>
+  </body>
+</html>
