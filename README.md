@@ -24,26 +24,14 @@ JokeAPI as the joke source.
 
 # Installation & Setup
 Clone the repository:
-sh
-Copy
-Edit
 git clone git@github.com:AlexVNep/capstoneProject4.git  
 cd capstoneProject4
 Install dependencies:
-sh
-Copy
-Edit
 npm install  
 
 # Run the application:
-sh
-Copy
-Edit
 npm start  
 Open your browser and go to:
-sh
-Copy
-Edit
 http://localhost:3000  
 
 # Usage
