@@ -41,7 +41,7 @@ Copy
 Edit
 npm start  
 Open your browser and go to:
-arduino
+sh
 Copy
 Edit
 http://localhost:3000  
