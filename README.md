@@ -30,7 +30,7 @@ Install dependencies:
 npm install  
 
 # Run the application:
-npm start  
+node --watch index.js
 Open your browser and go to:
 http://localhost:3000  
 
