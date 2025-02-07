@@ -27,8 +27,8 @@ Clone the repository:
 sh
 Copy
 Edit
-git clone https://github.com/yourusername/jokes-on-you.git  
-cd jokes-on-you
+git clone git@github.com:AlexVNep/capstoneProject4.git  
+cd capstoneProject4
 Install dependencies:
 sh
 Copy
